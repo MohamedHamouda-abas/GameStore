@@ -1,0 +1,26 @@
+﻿@page
+@model BULKYRAZOR_TEMP.Pages.Categories.DeleteModel
+@{
+}
+<form method="post">
+    <input asp-for="Delete.Id" type="hidden" />
+    <div class="border p-3 mt-4">
+        <div class="mb-3 row p-1">
+            <label asp-for="Delete.Name" class="form-control"></label>
+            <input asp-for="Delete.Name" class="p-0" maxlength="256" />
+            <span asp-validation-for="Delete.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Delete.DisPlayOrder" class="form-control"></label>
+            <input asp-for="Delete.DisPlayOrder" class="p-0" maxlength="256" />
+            <span asp-validation-for="Delete.DisPlayOrder" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+        <a asp-page="/Categories/Index" class="btn btn-secondary" style="width:150px">Back To List</a>
+    </div>
+</form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

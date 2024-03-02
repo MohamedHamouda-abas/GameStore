@@ -1,0 +1,36 @@
+﻿<div class="card-header bg-secondary bg-gradient ml-0 py-3">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h2 class="text-white py-2">Category Delete</h2>
+        </div>
+    </div>
+</div>
+@model Category
+<form method="post" class="row">
+    <div class="border p-3  ">
+        <div class="form-floating py-2 col-12">
+            <input asp-for="Name" class="form-control border-0 shadow" maxlength="256" disabled />
+            <label asp-for="Name" class="ms-2 " ></label>
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-floating py-2 col-12">
+            <input asp-for="DisPlayOrder" class="form-control border-0 shadow" maxlength="256" disabled />
+            <label asp-for="DisPlayOrder" class="ms-2" ></label>
+            <span asp-validation-for="DisPlayOrder" class="text-danger"></span>
+        </div>
+
+        <div class="row" pt-2>
+            <div class="col-6 col-md-2">
+                <button type="submit" class="btn btn-outline-danger" style="width:150px">Delete</button>
+            </div>
+            <div class="col-6 col-md-2">
+                <a asp-controller="Category" asp-action="Index" class="btn btn-outline-secondary" style="width:150px">Back To List</a>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts {
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}

@@ -1,0 +1,25 @@
+﻿@page
+@model BULKYRAZOR_TEMP.Pages.Categories.CreateModel
+@{
+}
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="mb-3 row p-1">
+            <label asp-for="Create.Name" class="form-control"></label>
+            <input asp-for="Create.Name" class="p-0" maxlength="256" />
+            <span asp-validation-for="Create.Name" class="text-danger"></span>
+        </div>
+        <div class="mb-3 row p-1">
+            <label asp-for="Create.DisPlayOrder" class="form-control"></label>
+            <input asp-for="Create.DisPlayOrder" class="p-0" maxlength="256" />
+            <span asp-validation-for="Create.DisPlayOrder" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:150px">Login</button>
+        <a asp-page="/Categories/Index" class="btn btn-secondary" style="width:150px">Back To List</a>
+    </div>
+</form>
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial"/>
+    }
+}
